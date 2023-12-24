@@ -1,0 +1,180 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.primario {
+  background-color: #54A6F0 !important;
+  color: black !important
+}
+
+/*MARCADOR MAPA*/
+.leaflet-bootstrap-icon {
+  font-size: 24px; 
+  color: #007bff; 
+}
+
+
+/*PALETA COLORES: #27374D #526D82 #9DB2BF #DDE6ED*/
+
+.tarjeta {
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-bottom: 5%;
+}
+
+.buscador {
+  margin-top: 2%;
+  margin-bottom: 1%;
+  margin-right: 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+
+.container1 {
+  margin-bottom: 7%;
+}
+
+.navbar {
+  background-color: #9DB2BF ;
+}
+
+.botonBusqueda {
+  margin-left: 2%;
+  margin-right: 2%;
+  width: 65%;
+  border: #282c34 2px solid;
+  background-color: #9DB2BF;
+  border-radius: 1vmin;
+}
+
+.barrabusqueda {
+  height: 6vmin;
+  width: 30vmin;
+  margin-right: 2%;
+}
+
+.formularioCrear{
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 5%;
+}
+
+.formularioCrear h2 {
+  display:flex;
+  margin-left: 40%;
+}
+
+.buscador-center {
+  margin-top: 2%;
+  margin-bottom: 1%;
+  margin-right: 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.botonBusquedaBig {
+  margin-left: 2%;
+  margin-right: 2%;
+  width: 80%;
+  border: #282c34 2px solid;
+  background-color: #9DB2BF;
+  border-radius: 1vmin;
+}
+
+.barrabusquedabig {
+  height: 5vmin;
+  width: 90%;
+  margin-right: 2%;
+}
+
+.container-fluid {
+  padding: 20px;
+  background-color: #f4f7fa; /* Fondo claro para resaltar el contenido */
+}
+
+.row {
+  margin-bottom: 20px;
+}
+
+.col-5 {
+  padding: 1.5vw;
+  background-color: #fff; /* Fondo blanco para los componentes */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera para profundidad */
+  border-radius: 8px; /* Bordes redondeados */
+  margin-left:  2vw;
+}
+
+.col-3 {
+  padding: 1.5vw;
+  background-color: #ffffff;
+  box-shadow: 0 1vw 2vw rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  /* Ajusta el margin-right para dejar espacio entre columnas */
+  margin-right: 2vw;
+  margin-left:  1vw;
+}
+
+
+/* Asegúrate de que el último elemento de la fila no tenga margin-right */
+.col-4:last-child {
+  margin-right: 0;
+}
+
+.col-6:not(:last-child) {
+  margin-right: 15px; /* Espacio entre columnas */
+}
+
+/* Estilos para títulos de secciones */
+.section-title {
+  color: #6194ca; /* Azul para títulos */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Agregar alguna transición suave a los botones u otros elementos interactivos */
+button {
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #6584a4; /* Un azul más oscuro al pasar el mouse */
+}
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
