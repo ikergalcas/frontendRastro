@@ -56,7 +56,7 @@ const CompPago = () => {
             "comprador": idUsuario,
           });
 
-        fetch(`http://localhost:3001/productos/${idProducto}`, {
+        fetch(`https://backend-rastro.vercel.app/productos/${idProducto}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -83,7 +83,7 @@ const CompPago = () => {
             "transporte" : transporte
         })
 
-        fetch('http://localhost:3001/productos/huellaCarbonoNuevo', {
+        fetch('https://backend-rastro.vercel.app/productos/huellaCarbonoNuevo', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -112,7 +112,7 @@ const CompPago = () => {
                 "transporte" : transporte
             })
     
-            fetch('http://localhost:3001/productos/huellaCarbono', {
+            fetch('https://backend-rastro.vercel.app/productos/huellaCarbono', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -142,7 +142,7 @@ const CompPago = () => {
             <NavbarPage></NavbarPage>
             <div className="container mt-5">
                 <div className="row">
-                    <div className="col-6 bg-primary-subtle">
+                    <div className="card col-md-6 bg-primary-subtle">
                     <div className="card-header bg-primary-subtle">
                         <h4 className="card-title">Resumen de pago</h4>
                         <div className='card'>
@@ -194,7 +194,7 @@ const CompPago = () => {
                         </div>
                     </div>
                     </div>
-                    <div className="col-5 bg-light">
+                    <div className="card col bg-light">
                         <div className="card-body">
                             <h5>Credenciales pago paypal:</h5>
                             <p>Correo: sb-bgakd28873605@personal.example.com </p>

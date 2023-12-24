@@ -6,7 +6,7 @@ const CompBorrarSubasta = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        fetch(`http://localhost:3001/productos/${idProducto}`, {
+        fetch(`https://backend-rastro.vercel.app/productos/${idProducto}`, {
             method: 'DELETE',
         }).then(data => {
             window.location.href=`/productos/${idUsuario}`

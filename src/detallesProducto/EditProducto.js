@@ -14,7 +14,7 @@ const CompEditProducto = () => {
     const getProducto = async () => {
         try {
             // Hacer la solicitud para obtener productos desde el backend
-            const response = await fetch(`http://localhost:3001/productos/${idProducto}`, {
+            const response = await fetch(`https://backend-rastro.vercel.app/productos/${idProducto}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ const CompEditProducto = () => {
         }
         try {
             // Hacer la solicitud PUT al backend
-            const response = await fetch(`http://localhost:3001/productos/${idProducto}`, {
+            const response = await fetch(`https://backend-rastro.vercel.app/productos/${idProducto}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

@@ -19,7 +19,7 @@ function NavbarPage() {
   }, []);
 
   const getPendientes = async () => {
-    fetch(`http://localhost:3003/usuarios/${idUsuario}/productos/pendientes`, {
+    fetch(`https://backend-rastro.vercel.app/usuarios/${idUsuario}/productos/pendientes`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ function NavbarPage() {
 
 
   const comprobarConexion = async () => {
-    fetch(`http://localhost:3003/usuarios/conexion/${idUsuario}/${JSON.parse(localStorage.getItem('objetoToken')).tokenId}/${JSON.parse(localStorage.getItem('objetoToken')).tokenCompleto}`, {  
+    fetch(`https://backend-rastro.vercel.app/usuarios/conexion/${idUsuario}/${JSON.parse(localStorage.getItem('objetoToken')).tokenId}/${JSON.parse(localStorage.getItem('objetoToken')).tokenCompleto}`, {  
       method: 'GET',
       headers: {
           'Content-Type': 'application/json',

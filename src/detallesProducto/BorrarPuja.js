@@ -7,7 +7,7 @@ const CompBorrarPuja = () => {
 
     useEffect(() => {
         console.log(idPuja);
-        fetch(`http://localhost:3001/productos/${idProducto}/deletePuja/${idPuja}`, {
+        fetch(`https://backend-rastro.vercel.app/productos/${idProducto}/deletePuja/${idPuja}`, {
             method: 'PUT',
         }).then(data => {
             // Redirige al usuario después de borrar la puja

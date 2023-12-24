@@ -12,7 +12,7 @@ const ShowMapaUsuario = () => {
 
     //Consulta para obtener la geolocalizacion del producto
     useEffect(() => {
-        fetch(`http://localhost:3003/usuarios/ubi/${idUsuario}`)
+        fetch(`https://backend-rastro.vercel.app/usuarios/ubi/${idUsuario}`)
             .then(response => response.json())
             .then(data => {
                 setGeo(data);

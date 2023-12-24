@@ -16,7 +16,7 @@ const CompShowComentarios = () => {
     const getProductos = async () => {
         console.log(idProducto);
         // Hacer la solicitud para obtener productos desde el backend
-        fetch(`http://localhost:3001/productos/${idProducto}`, {
+        fetch(`https://backend-rastro.vercel.app/productos/${idProducto}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ const CompShowComentarios = () => {
     const [comentarios, setComentarios] = useState({});
     useEffect(() => {
         // Hacer la solicitud para obtener productos desde el backend
-        fetch(`http://localhost:3001/productos/${idProducto}/comentarios`, {
+        fetch(`https://backend-rastro.vercel.app/productos/${idProducto}/comentarios`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ const CompShowComentarios = () => {
             const rawDatosComentario = JSON.stringify(datosComentario);
 
         // Realizar la solicitud al backend
-        fetch(`http://localhost:3001/productos/${idProducto}/crearComentario`, {
+        fetch(`https://backend-rastro.vercel.app/productos/${idProducto}/crearComentario`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -126,7 +126,7 @@ const CompShowComentarios = () => {
             const rawDatosRespuesta = JSON.stringify(datosRespuesta);
 
             // Realizar la solicitud al backend
-        fetch(`http://localhost:3001/productos/${idProducto}/crearRespuestaComentario/${idComentario}`, {
+        fetch(`https://backend-rastro.vercel.app/productos/${idProducto}/crearRespuestaComentario/${idComentario}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -156,7 +156,7 @@ const CompShowComentarios = () => {
         const obtenerUsuarios = async () => {
             if (Array.isArray(comentarios)) {
         const usuariosPromises = comentarios.map((comentario) =>
-            fetch(`http://localhost:3003/usuarios/${comentario.usuario}`).then((res) => res.json())
+            fetch(`https://backend-rastro.vercel.app/usuarios/${comentario.usuario}`).then((res) => res.json())
         );
 
         const usuariosData = await Promise.all(usuariosPromises);

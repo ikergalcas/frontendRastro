@@ -27,7 +27,7 @@ const CompLogin = () => {
 
     function handleCallBackResponse (response){
         console.log("Encode JWT: "+  response.credential)
-        fetch(`http://localhost:3003/usuarios/loginToken/${response.credential}`, {
+        fetch(`https://backend-rastro.vercel.app/usuarios/loginToken/${response.credential}`, {
         method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

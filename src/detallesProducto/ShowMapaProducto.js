@@ -18,7 +18,7 @@ const CompShowMapaProducto = () => {
 
     // En posiciton almaceno la geolocalizacion del producto
     useEffect(() => {
-        fetch(`http://localhost:3001/productos/${idProducto}`)
+        fetch(`https://backend-rastro.vercel.app/productos/${idProducto}`)
             .then(response => response.json())
             .then(data => {
                 setProducto(data);

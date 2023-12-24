@@ -26,7 +26,7 @@ const CompShowCrearProducto = () => {
             "peso": peso
           });
 
-        fetch('http://localhost:3001/productos/', {
+        fetch('https://backend-rastro.vercel.app/productos/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ const CompShowCrearProducto = () => {
             var formdata = new FormData();
             formdata.append("foto", archivo);
     
-            fetch('http://localhost:3001/productos/subirFoto', {
+            fetch('https://backend-rastro.vercel.app/productos/subirFoto', {
                     method: 'POST',
                     body : formdata
                 }).then(response => response.json())
@@ -64,7 +64,7 @@ const CompShowCrearProducto = () => {
                           });
                         console.log("este es el id:", idnuevoProducto)
                         console.log(result.imageUrl)
-                        fetch(`http://localhost:3001/productos/${idnuevoProducto.replace(/"/g, '')}`, {
+                        fetch(`https://backend-rastro.vercel.app/productos/${idnuevoProducto.replace(/"/g, '')}`, {
                             method: 'PUT',
                             headers: {
                                 'Content-Type': 'application/json',
@@ -99,7 +99,7 @@ const CompShowCrearProducto = () => {
                 var formdata = new FormData();
                 formdata.append("foto", arch);
         
-                fetch('http://localhost:3001/productos/subirFoto', {
+                fetch('https://backend-rastro.vercel.app/productos/subirFoto', {
                     method: 'POST',
                     body : formdata
                 }).then(response => response.json())
@@ -127,7 +127,7 @@ const CompShowCrearProducto = () => {
         var raw = JSON.stringify({
             "imagenes" : arrayFotos
             });
-        fetch(`http://localhost:3001/productos/${idnuevoProducto.replace(/"/g, '')}`, {
+        fetch(`https://backend-rastro.vercel.app/productos/${idnuevoProducto.replace(/"/g, '')}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

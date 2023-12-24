@@ -10,7 +10,7 @@ const CompBorrarComentario = () => {
 
     useEffect(() => {
         console.log("el comentario es" + idComentario);
-        fetch(`http://localhost:3001/productos/${idProducto}/deleteComentario/${idComentario}`, {
+        fetch(`https://backend-rastro.vercel.app/productos/${idProducto}/deleteComentario/${idComentario}`, {
             method: 'PUT',
         }).then(data => {
             // Redirige al usuario después de borrar la puja

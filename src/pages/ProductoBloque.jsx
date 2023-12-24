@@ -14,7 +14,9 @@ function ProductoBloque() {
             <div className="container-fluid">
                 <div className="row mb-4">
                     <div className="col">
-                        <h2 className="section-title">Detalles del Producto</h2>
+                        <div style={{textAlign:'center'}}>
+                            <h2 className="section-title">Detalles del Producto</h2>
+                        </div>
                         <CompShowDetallesProducto/>   
                     </div>
                 </div>

@@ -15,7 +15,7 @@ const CompEditUser = () => {
     }, []);
 
     const getUsuario = async () => {
-        fetch(`http://localhost:3003/usuarios/${idUsuario}`, {
+        fetch(`https://backend-rastro.vercel.app/usuarios/${idUsuario}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -32,7 +32,7 @@ const CompEditUser = () => {
     }
 
     const getPendientes = async () => {
-        fetch(`http://localhost:3003/usuarios/${idUsuario}/productos/pendientes`, {
+        fetch(`https://backend-rastro.vercel.app/usuarios/${idUsuario}/productos/pendientes`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ const CompEditUser = () => {
             var formdata = new FormData();
             formdata.append("foto", archivo);
     
-            fetch('http://localhost:3003/usuarios/subirFoto', {
+            fetch('https://backend-rastro.vercel.app/usuarios/subirFoto', {
                 method: 'POST',
                 body : formdata
             }).then(response => response.json())
@@ -66,7 +66,7 @@ const CompEditUser = () => {
                     "foto" : result.imageUrl
                 });
                 console.log(result.imageUrl)
-                fetch(`http://localhost:3003/usuarios/${idUsuario}`, {
+                fetch(`https://backend-rastro.vercel.app/usuarios/${idUsuario}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',

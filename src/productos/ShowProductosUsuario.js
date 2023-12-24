@@ -11,7 +11,7 @@ const ShowProductosVendidos = () => {
     useEffect( () => {getProductosDeUsuario()}, []);
 
     const getProductosDeUsuario = async () => {
-        fetch(`http://localhost:3003/usuarios/${idUsuarioAjeno}/productos/${filtro}`, {
+        fetch(`https://backend-rastro.vercel.app/usuarios/${idUsuarioAjeno}/productos/${filtro}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -38,7 +38,7 @@ const ShowProductosVendidos = () => {
               });
             console.log(raw);
             // Hacer la solicitud para obtener productos desde el backend
-            fetch(`http://localhost:3003/usuarios/${idUsuarioAjeno}/descripcionProductos/${filtro}`, {
+            fetch(`https://backend-rastro.vercel.app/usuarios/${idUsuarioAjeno}/descripcionProductos/${filtro}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -59,7 +59,7 @@ const ShowProductosVendidos = () => {
                 "precio": precioMax
               });
             // Hacer la solicitud para obtener productos desde el backend
-            fetch(`http://localhost:3003/usuarios/${idUsuarioAjeno}/precioProductos/${filtro}`, {
+            fetch(`https://backend-rastro.vercel.app/usuarios/${idUsuarioAjeno}/precioProductos/${filtro}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -82,7 +82,7 @@ const ShowProductosVendidos = () => {
                 "precio" : precioMax
               });
             // Hacer la solicitud para obtener productos desde el backend
-            fetch(`http://localhost:3003/usuarios/${idUsuarioAjeno}/descripcionPrecioProductos/${filtro}`, {
+            fetch(`https://backend-rastro.vercel.app/usuarios/${idUsuarioAjeno}/descripcionPrecioProductos/${filtro}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

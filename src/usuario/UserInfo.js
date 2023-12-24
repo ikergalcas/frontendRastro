@@ -13,7 +13,7 @@ const CompEditUser = () => {
     useEffect( () => {getUsuario()}, []);
 
     const getUsuario = async () => {
-        fetch(`http://localhost:3003/usuarios/${idUsuarioAjeno}`, {
+        fetch(`https://backend-rastro.vercel.app/usuarios/${idUsuarioAjeno}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

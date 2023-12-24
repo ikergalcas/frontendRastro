@@ -26,7 +26,7 @@ const CompShowDetallesProducto = () => {
     //segunda consulta uso el atributo vendedor de la primera
     useEffect(() => {
         // Hacer la solicitud para obtener un producto desde el backend 
-        fetch(`http://localhost:3001/productos/${idProducto}/checkeo`, {
+        fetch(`https://backend-rastro.vercel.app/productos/${idProducto}/checkeo`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ const CompShowDetallesProducto = () => {
             }
 
             // Hacer la solicitud para obtener el vendedor
-            return fetch(`http://localhost:3003/usuarios/${data.producto.vendedor}`);
+            return fetch(`https://backend-rastro.vercel.app/usuarios/${data.producto.vendedor}`);
         })
         .then(response => response.json())
         .then(data => {
@@ -55,7 +55,7 @@ const CompShowDetallesProducto = () => {
     }, [idProducto]);
 
     const getUsuario = async () => {
-        fetch(`http://localhost:3003/usuarios/${idUsuario}`, {
+        fetch(`https://backend-rastro.vercel.app/usuarios/${idUsuario}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -80,7 +80,7 @@ const CompShowDetallesProducto = () => {
             var formdata = new FormData();
             formdata.append("foto", archivo);
     
-            fetch('http://localhost:3001/productos/subirFoto', {
+            fetch('https://backend-rastro.vercel.app/productos/subirFoto', {
                     method: 'POST',
                     body : formdata
                 }).then(response => response.json())
@@ -88,7 +88,7 @@ const CompShowDetallesProducto = () => {
                         var raw = JSON.stringify({
                             "foto" : result.imageUrl
                           });
-                        fetch(`http://localhost:3001/productos/${idProducto}/nuevaImagen`, {
+                        fetch(`https://backend-rastro.vercel.app/productos/${idProducto}/nuevaImagen`, {
                             method: 'PUT',
                             headers: {
                                 'Content-Type': 'application/json',
@@ -125,7 +125,7 @@ const CompShowDetallesProducto = () => {
     
         console.log("Antes de la solicitud PUT");
         // Pongo el producto como valorado, recalculo la media de valoración y la actualizo
-        fetch('http://localhost:3001/productos/valoracion/calculoValoracion', {
+        fetch('https://backend-rastro.vercel.app/productos/valoracion/calculoValoracion', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -146,7 +146,7 @@ const CompShowDetallesProducto = () => {
             "idProducto": idProducto,
         });
 
-        fetch(`http://localhost:3001/productos/${idProducto}/cerrarPuja`, {
+        fetch(`https://backend-rastro.vercel.app/productos/${idProducto}/cerrarPuja`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -170,7 +170,7 @@ const CompShowDetallesProducto = () => {
             var formdata = new FormData();
             formdata.append("foto", archivo);
     
-            fetch('http://localhost:3003/usuarios/subirFoto', {
+            fetch('https://backend-rastro.vercel.app/usuarios/subirFoto', {
                     method: 'POST',
                     body : formdata
                 }).then(response => response.json())
@@ -179,7 +179,7 @@ const CompShowDetallesProducto = () => {
                             "foto" : result.imageUrl
                           });
                         console.log(result.imageUrl)
-                        fetch(`http://localhost:3001/productos/${producto._id}`, {
+                        fetch(`https://backend-rastro.vercel.app/productos/${producto._id}`, {
                             method: 'PUT',
                             headers: {
                                 'Content-Type': 'application/json',
@@ -220,7 +220,7 @@ const CompShowDetallesProducto = () => {
                 var formdata = new FormData();
                 formdata.append("foto", arch);
         
-                fetch('http://localhost:3003/usuarios/subirFoto', {
+                fetch('https://backend-rastro.vercel.app/usuarios/subirFoto', {
                     method: 'POST',
                     body : formdata
                 }).then(response => response.json())
@@ -244,7 +244,7 @@ const CompShowDetallesProducto = () => {
         var raw = JSON.stringify({
             "imagenes" : arrayFotos
             });
-        fetch(`http://localhost:3001/productos/${producto._id}`, {
+        fetch(`https://backend-rastro.vercel.app/productos/${producto._id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

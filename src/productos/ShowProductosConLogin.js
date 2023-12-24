@@ -37,7 +37,7 @@ const ShowProductosConLogin = () => {
         // Hacer la solicitud para obtener productos desde el backend
         // Mostramos todos los productos cuya subasta sigue abierta (vendido = false)
         // Esta consulta tambien nos devuelve 
-        fetch(`http://localhost:3001/productos/${idUsuario}/inicio`, {
+        fetch(`https://backend-rastro.vercel.app/productos/${idUsuario}/inicio`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -63,7 +63,7 @@ const ShowProductosConLogin = () => {
                 "descripcion": busqueda.toString()
               });
             // Hacer la solicitud para obtener productos desde el backend
-            fetch('http://localhost:3001/productos/descripcion', {
+            fetch('https://backend-rastro.vercel.app/productos/descripcion', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -84,7 +84,7 @@ const ShowProductosConLogin = () => {
                 "precio": precioMax
               });
             // Hacer la solicitud para obtener productos desde el backend
-            fetch('http://localhost:3001/productos/preciomax', {
+            fetch('https://backend-rastro.vercel.app/productos/preciomax', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -107,7 +107,7 @@ const ShowProductosConLogin = () => {
                 "idUsuario": idUsuario,
               });
             // Hacer la solicitud para obtener productos desde el backend
-            fetch('http://localhost:3001/productos/radio', {
+            fetch('https://backend-rastro.vercel.app/productos/radio', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -129,7 +129,7 @@ const ShowProductosConLogin = () => {
                 "precio" : precioMax
               });
             // Hacer la solicitud para obtener productos desde el backend
-            fetch('http://localhost:3001/productos/descripcionPrecio', {
+            fetch('https://backend-rastro.vercel.app/productos/descripcionPrecio', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -153,7 +153,7 @@ const ShowProductosConLogin = () => {
                 "descripcion": busqueda.toString()
               });
             // Hacer la solicitud para obtener productos desde el backend
-            fetch('http://localhost:3001/productos/descripcionRadio', {
+            fetch('https://backend-rastro.vercel.app/productos/descripcionRadio', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -177,7 +177,7 @@ const ShowProductosConLogin = () => {
                 "precio": precioMax
               });
             // Hacer la solicitud para obtener productos desde el backend
-            fetch('http://localhost:3001/productos/radioPrecio', {
+            fetch('https://backend-rastro.vercel.app/productos/radioPrecio', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -202,7 +202,7 @@ const ShowProductosConLogin = () => {
                 "descripcion": busqueda.toString()
               });
             // Hacer la solicitud para obtener productos desde el backend
-            fetch('http://localhost:3001/productos/descripcionRadioPrecio', {
+            fetch('https://backend-rastro.vercel.app/productos/descripcionRadioPrecio', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -234,7 +234,12 @@ const ShowProductosConLogin = () => {
 
 return(
     
-    <div className='container' style={{marginTop: '3%'}}>
+    <div className='container'>
+        <div className='row'>
+            <div className='col' style={{textAlign:'center'}}>
+                <h1>ElRastro</h1>
+            </div>
+        </div>
         <div className="row"> 
             <div className='col 8'>
                 {(usuario && usuario.lat !== undefined && usuario.lon !== undefined &&

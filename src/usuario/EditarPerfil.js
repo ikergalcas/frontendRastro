@@ -10,7 +10,7 @@ const CompEditProducto = () => {
     useEffect( () => {getUsuario()}, []);
 
     const getUsuario = async () => {
-        fetch(`http://localhost:3003/usuarios/${idUsuario}`, {
+        fetch(`https://backend-rastro.vercel.app/usuarios/${idUsuario}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ const CompEditProducto = () => {
 
         try {
             // Hacer la solicitud PUT al backend
-            const response = await fetch(`http://localhost:3003/usuarios/${idUsuario}`, {
+            const response = await fetch(`https://backend-rastro.vercel.app/usuarios/${idUsuario}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

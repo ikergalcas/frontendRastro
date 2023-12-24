@@ -15,7 +15,7 @@ const CompShowPujas = () => {
     const getProductos = async () => {
         console.log(idProducto);
         // Hacer la solicitud para obtener productos desde el backend
-        fetch(`http://localhost:3001/productos/${idProducto}`, {
+        fetch(`https://backend-rastro.vercel.app/productos/${idProducto}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ const CompShowPujas = () => {
     const [pujas, setPujas] = useState({});
     useEffect(() => {
         // Hacer la solicitud para obtener productos desde el backend
-        fetch(`http://localhost:3001/productos/${idProducto}/pujas`, {
+        fetch(`https://backend-rastro.vercel.app/productos/${idProducto}/pujas`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -77,7 +77,7 @@ const CompShowPujas = () => {
             const rawDatosPuja = JSON.stringify(datosPuja);
 
             // Realizar la solicitud al backend
-            fetch(`http://localhost:3001/productos/${idProducto}/crearPuja`, {
+            fetch(`https://backend-rastro.vercel.app/productos/${idProducto}/crearPuja`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -109,7 +109,7 @@ const CompShowPujas = () => {
             // Verificar si pujas es un array antes de continuar
             if (Array.isArray(pujas)) {
                 const usuariosPromises = pujas.map((puja) =>
-                    fetch(`http://localhost:3003/usuarios/${puja.usuario}`).then((res) => res.json())
+                    fetch(`https://backend-rastro.vercel.app/usuarios/${puja.usuario}`).then((res) => res.json())
                 );
     
                 const usuariosData = await Promise.all(usuariosPromises);
